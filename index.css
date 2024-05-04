@@ -29,7 +29,7 @@
   }
   
   #cube {
-    width: min(80vw, 500px);
+    width: min(50vw, 500px);
     aspect-ratio: 1;
     margin: 40px;
     border-radius: 15px;
@@ -77,18 +77,18 @@
   }
   
   .front {
-    transform: translateZ(calc(min(80vw, 500px) / 2));
+    transform: translateZ(calc(min(50vw, 500px) / 2));
   }
   
   .back {
-    transform: translateZ(calc(-1 * min(80vw, 500px) / 2)) rotateY(180deg);
+    transform: translateZ(calc(-1 * min(50vw, 500px) / 2)) rotateY(180deg);
   }
   
   .right {
-    transform: rotateY(90deg) translateZ(calc(min(80vw, 500px) / 2));
+    transform: rotateY(90deg) translateZ(calc(min(50vw, 500px) / 2));
   }
   
   .left {
-    transform: rotateY(-90deg) translateZ(calc(min(80vw, 500px) / 2));
+    transform: rotateY(-90deg) translateZ(calc(min(50vw, 500px) / 2));
   }
   
