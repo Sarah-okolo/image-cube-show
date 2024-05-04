@@ -5,14 +5,20 @@
   }
   
   body {
+    min-height: 100vh;
     display: grid;
     place-items: center;
-    padding: 15px;
+    padding: 5px;
+  }
+
+  h1 {
+    position: absolute;
+    top: 10px;
+    bottom: 40px; 
   }
   
   #container {
     width: 100%;
-    margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
