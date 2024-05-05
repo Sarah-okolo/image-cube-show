@@ -20,26 +20,29 @@ let imagesFilePath = [
   "https://source.unsplash.com/500x500?girl",
   "https://source.unsplash.com/500x500?valley"
 ];
+
 let imgtag = 0;
 let srcIndex = 4;
-let IntervalID;
+let intervalID;
 let isAnimating = true;
 
 function rotateForwards() {
+  clearInterval(intervalID); // Clear previous interval
   intervalID = setInterval(() => {
     cubeSides[imgtag].src = imagesFilePath[srcIndex];
     imgtag = (imgtag + 1) % cubeSides.length;
     srcIndex = (srcIndex + 1) % imagesFilePath.length;
-  }, 7600);
+  }, 7500);
 }
 rotateForwards();
 
 function rotateBackwards() {
+  clearInterval(intervalID); // Clear previous interval
   intervalID = setInterval(() => {
-    cubeSides[imgtag].src = imagesFilePath[srcIndex];
-    srcIndex = (srcIndex - 1 + imagesFilePath.length) % imagesFilePath.length;
     imgtag = (imgtag - 1 + cubeSides.length) % cubeSides.length;
-  }, 7300);
+    srcIndex = (srcIndex - 1 + imagesFilePath.length) % imagesFilePath.length;
+    cubeSides[imgtag].src = imagesFilePath[srcIndex];
+  }, 7500);
 }
 
 leftButton.onclick = () => {
